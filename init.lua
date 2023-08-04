@@ -34,6 +34,7 @@ lsp.setup_nvim_cmp({
 
 lsp.on_attach(function(client, bufnr)
     lsp.default_keymaps({buffer = bufnr})
+    vim.keymap.set('n', '<Leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>', {buffer = true})
 end)
 
 lsp.setup()
