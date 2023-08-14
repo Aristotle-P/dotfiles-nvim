@@ -3,6 +3,7 @@ local mark = require("harpoon.mark")
 local ui = require("harpoon.ui")
 local builtin = require("telescope.builtin")
 
+-- Harpoon
 vim.keymap.set("n", "<leader>a", mark.add_file)
 vim.keymap.set("n", "<leader>hi", ui.toggle_quick_menu)
 
@@ -17,6 +18,7 @@ vim.keymap.set('n', '<leader>gs', function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
 
+-- Open Netrw
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Move highlighted text
